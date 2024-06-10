@@ -1,0 +1,5 @@
+{
+  "API_BASE_URL": "https://525f-149-88-110-59.ngrok-free.app",
+  "EXCHANGE_BASE_URL" : "https://v6.exchangerate-api.com/v6",
+  "EXCHANGE_API_KEY" : "dd639adaf7aba4899eab3d0e"
+}
