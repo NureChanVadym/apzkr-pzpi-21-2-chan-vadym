@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:EcoMeChan_Mobile.ViewModels"
+             xmlns:converters="clr-namespace:EcoMeChan_Mobile.Utils"
+             xmlns:resources="clr-namespace:EcoMeChan_Mobile.Resources.Languages"
+             x:Class="EcoMeChan_Mobile.Views.IoTDeviceManagementPage"
+             Title="IoT Device Management">
+    <ContentPage.BindingContext>
+        <viewmodels:IoTDeviceManagementViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <converters:ResourceTypeConverter x:Key="ResourceTypeConverter" />
+    </ContentPage.Resources>
+
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="PageTitleLabel" FontSize="20" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" Grid.Column="0" />
+            <ImageButton Source="globe_icon.png" Clicked="NavigateToLanguageSelection" HorizontalOptions="End" Grid.Column="1" />
+        </Grid>
+    </Shell.TitleView>
+
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Label x:Name="PageTitleTextLabel" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,0,0,20" />
+
+            <ListView ItemsSource="{Binding IoTDevices}" HasUnevenRows="True" SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Margin="0,0,0,20" Padding="15">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackLayout Grid.Column="0" Spacing="5">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                        <Label Text="{Binding Id, StringFormat='{0}'}" />
+                                        <Label Text="{Binding Type, Converter={StaticResource ResourceTypeConverter}}" />
+                                    </StackLayout>
+
+                                    <Switch Grid.Column="1" IsToggled="{Binding IsActive, Mode=TwoWay}" Margin="10,0" />
+
+                                    <Button Grid.Column="2" Text="{x:Static resources:AppResources.DeleteButtonText}" Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:IoTDeviceManagementViewModel}}, Path=DeleteIoTDeviceCommand}" CommandParameter="{Binding}" BackgroundColor="Red" TextColor="White" Padding="10" Margin="10,0,0,0" />
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

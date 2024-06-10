@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EcoMeChan_Mobile.ViewModels"
+             xmlns:resources="clr-namespace:EcoMeChan_Mobile.Resources.Languages"
+             x:Class="EcoMeChan_Mobile.Views.MonitoringPage"
+             Title="{x:Static resources:AppResources.MonitoringTitle}">
+    <ContentPage.BindingContext>
+        <viewModels:MonitoringViewModel />
+    </ContentPage.BindingContext>
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="PageTitleLabel" FontSize="20" FontAttributes="Bold" TextColor="White" VerticalOptions="Center" Grid.Column="0" />
+            <ImageButton Source="globe_icon.png" Clicked="NavigateToLanguageSelection" HorizontalOptions="End" Grid.Column="1" />
+        </Grid>
+    </Shell.TitleView>
+    <ScrollView>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label x:Name="PageTitleTextLabel" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+            <ScrollView Grid.Row="1" Orientation="Horizontal">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="180" />
+                    </Grid.ColumnDefinitions>
+                    <Border Background="LightGray" Grid.Row="0" Grid.Column="0" Padding="5">
+                        <Label x:Name="NotificationIdLabelTitle" FontAttributes="Bold" />
+                    </Border>
+                    <Border Background="LightGray" Grid.Row="0" Grid.Column="1" Padding="5">
+                        <Label x:Name="NotificationIoTDeviceLabelTitle" FontAttributes="Bold" />
+                    </Border>
+                    <Border Background="LightGray" Grid.Row="0" Grid.Column="2" Padding="5">
+                        <Label x:Name="NotificationTypeLabelTitle" FontAttributes="Bold" />
+                    </Border>
+                    <Border Background="LightGray" Grid.Row="0" Grid.Column="3" Padding="5">
+                        <Label x:Name="NotificationTextLabelTitle" FontAttributes="Bold" />
+                    </Border>
+                    <Border Background="LightGray" Grid.Row="0" Grid.Column="4" Padding="5">
+                        <Label x:Name="NotificationCreatedAtLabelTitle" FontAttributes="Bold" />
+                    </Border>
+                    <CollectionView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" ItemsSource="{Binding Notifications}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="1" />
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="200" />
+                                        <ColumnDefinition Width="180" />
+                                    </Grid.ColumnDefinitions>
+                                    <Border Stroke="LightGray" StrokeThickness="0.5" Grid.Column="0" Padding="5">
+                                        <Label Text="{Binding Id}" LineBreakMode="WordWrap" />
+                                    </Border>
+                                    <Border Stroke="LightGray" StrokeThickness="0.5" Grid.Column="1" Padding="5">
+                                        <Label Text="{Binding IoTDeviceId}" LineBreakMode="WordWrap" />
+                                    </Border>
+                                    <Border Stroke="LightGray" StrokeThickness="0.5" Grid.Column="2" Padding="5">
+                                        <Label Text="{Binding NotificationType, Converter={StaticResource NotificationTypeConverter}}" LineBreakMode="WordWrap" />
+                                    </Border>
+                                    <Border Stroke="LightGray" StrokeThickness="0.5" Grid.Column="3" Padding="5">
+                                        <Label Text="{Binding Text}" LineBreakMode="WordWrap" />
+                                    </Border>
+                                    <Border Stroke="LightGray" StrokeThickness="0.5" Grid.Column="4" Padding="5">
+                                        <Label Text="{Binding FormattedCreatedAt}" LineBreakMode="WordWrap" />
+                                    </Border>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </ScrollView>
+        </Grid>
+    </ScrollView>
+</ContentPage>

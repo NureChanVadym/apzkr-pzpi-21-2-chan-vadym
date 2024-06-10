@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoMeChan_Mobile.MainPage"
+             Title="WelcomeLabel">
+
+    <VerticalStackLayout VerticalOptions="Center" Spacing="20">
+        <Label 
+            x:Name="WelcomeLabel"
+            FontSize="24" 
+            HorizontalOptions="Center" />
+
+        <Button 
+            x:Name="RegisterButton"
+            Clicked="RegisterButton_Clicked"
+            HorizontalOptions="Center" />
+
+        <Button 
+            x:Name="LoginButton"
+            Clicked="LoginButton_Clicked"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+
+</ContentPage>

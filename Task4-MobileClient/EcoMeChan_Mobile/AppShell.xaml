@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell x:Class="EcoMeChan_Mobile.AppShell"
+       xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:EcoMeChan_Mobile"
+       xmlns:views="clr-namespace:EcoMeChan_Mobile.Views"
+       Shell.FlyoutBehavior="Disabled">
+
+    <Shell.Resources>
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.TitleView">
+                <Setter.Value>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="PageTitleLabel" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" Grid.Column="0" />
+                        <ImageButton Source="globe_icon.png" Clicked="NavigateToLanguageSelection" HorizontalOptions="End" Grid.Column="1" />
+                    </Grid>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellContent" />
+    </Shell.Resources>
+
+    <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
+    <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate views:LoginPage}" />
+
+    <TabBar x:Name="UserTabBar" Route="UserTab">
+        <ShellContent x:Name="ConsumptionHistoryTab" ContentTemplate="{DataTemplate views:ConsumptionHistoryPage}" Route="ConsumptionHistoryPage" />
+        <ShellContent x:Name="IoTDevicesTab" ContentTemplate="{DataTemplate views:IoTDevicesPage}" Route="IoTDevicesPage" />
+        <ShellContent x:Name="UserAccountTab" ContentTemplate="{DataTemplate views:UserAccountPage}" Route="UserAccountPage" />
+    </TabBar>
+
+    <TabBar x:Name="AdminTabBar" Route="AdminTab">
+        <ShellContent x:Name="UserManagementTab" ContentTemplate="{DataTemplate views:AdminAccountManagementPage}" Route="AdminAccountManagementPage" />
+        <ShellContent x:Name="IoTDeviceManagementTab" ContentTemplate="{DataTemplate views:IoTDeviceManagementPage}" Route="IoTDeviceManagementPage" />
+        <ShellContent x:Name="MonitoringTab" ContentTemplate="{DataTemplate views:MonitoringPage}" Route="MonitoringPage" />
+        <ShellContent x:Name="AdminAccountTab" ContentTemplate="{DataTemplate views:AdminAccountPage}" Route="AdminAccountPage" />
+    </TabBar>
+
+    <ShellContent Title="Edit User" ContentTemplate="{DataTemplate views:EditUserPage}" Route="EditUserPage" />
+
+</Shell>

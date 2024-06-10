@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountManagementTitleText" xml:space="preserve">
+    <value>Account Management</value>
+  </data>
+  <data name="AccountUpdatedSuccessMessage" xml:space="preserve">
+    <value>Account information updated successfully</value>
+  </data>
+  <data name="AccountUpdateErrorMessage" xml:space="preserve">
+    <value>Failed to update account information</value>
+  </data>
+  <data name="ActionsHeaderText" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ActiveText" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AdminAccountManagementTitle" xml:space="preserve">
+    <value>Account Management</value>
+  </data>
+  <data name="AdminAccountTitle" xml:space="preserve">
+    <value>Admin Account</value>
+  </data>
+  <data name="AdminAccountTitleText" xml:space="preserve">
+    <value>Admin Account</value>
+  </data>
+  <data name="AdminTabAccountManagementText" xml:space="preserve">
+    <value>Account Management</value>
+  </data>
+  <data name="AdminTabAccountText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="AdminTabIoTDeviceManagementText" xml:space="preserve">
+    <value>IoT Device Management</value>
+  </data>
+  <data name="AdminTabMonitoringText" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="AllResourceTypesText" xml:space="preserve">
+    <value>All Resource Types</value>
+  </data>
+  <data name="AmountFromLabelText" xml:space="preserve">
+    <value>Amount From</value>
+  </data>
+  <data name="AmountLabel" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AmountToLabelText" xml:space="preserve">
+    <value>Amount To</value>
+  </data>
+  <data name="BackupManagementTitleText" xml:space="preserve">
+    <value>Backup Management</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ConsumptionHistoryTitle" xml:space="preserve">
+    <value>Consumption History</value>
+  </data>
+  <data name="ConsumptionHistoryTitleText" xml:space="preserve">
+    <value>Consumption History</value>
+  </data>
+  <data name="CostFromLabelText" xml:space="preserve">
+    <value>Cost From</value>
+  </data>
+  <data name="CostLabel" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="CostToLabelText" xml:space="preserve">
+    <value>Cost To</value>
+  </data>
+  <data name="CreateBackupButtonText" xml:space="preserve">
+    <value>Create Backup</value>
+  </data>
+  <data name="CreatedAtHeaderText" xml:space="preserve">
+    <value>Created At</value>
+  </data>
+  <data name="CreateUserButtonText" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="CreateUserTitle" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="CreateUserTitleText" xml:space="preserve">
+    <value>Create User</value>
+  </data>
+  <data name="CriticalNotificationText" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="CurrencyEUR" xml:space="preserve">
+    <value>EUR</value>
+  </data>
+  <data name="CurrencyUAH" xml:space="preserve">
+    <value>UAH</value>
+  </data>
+  <data name="CurrencyUSD" xml:space="preserve">
+    <value>USD</value>
+  </data>
+  <data name="DateFromLabelText" xml:space="preserve">
+    <value>Date From</value>
+  </data>
+  <data name="DateFromPlaceholderText" xml:space="preserve">
+    <value>mm/dd/yyyy</value>
+  </data>
+  <data name="DateHeaderText" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateLabel" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateToLabelText" xml:space="preserve">
+    <value>Date To</value>
+  </data>
+  <data name="DateToPlaceholderText" xml:space="preserve">
+    <value>mm/dd/yyyy</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditButtonText" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditUserTitle" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="EditUserTitleText" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="ElectricitySensorText" xml:space="preserve">
+    <value>Electricity Sensor</value>
+  </data>
+  <data name="EmailHeaderText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailLabel" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="EmailLabelText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailLabelTitle" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="EmailPlaceholder" xml:space="preserve">
+    <value>Enter email</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FiltersButtonText" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="FirstNameHeaderText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FirstNameLabel" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="FirstNameLabelText" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FirstNameLabelTitle" xml:space="preserve">
+    <value>First Name:</value>
+  </data>
+  <data name="FirstNamePlaceholder" xml:space="preserve">
+    <value>Enter first name</value>
+  </data>
+  <data name="GasSensorText" xml:space="preserve">
+    <value>Gas Sensor</value>
+  </data>
+  <data name="GoBackButtonText" xml:space="preserve">
+    <value>Go Back</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="InactiveText" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="IoTDeviceHeaderText" xml:space="preserve">
+    <value>IoT Device</value>
+  </data>
+  <data name="IoTDeviceManagementTitle" xml:space="preserve">
+    <value>IoT Device Management</value>
+  </data>
+  <data name="IoTDevicesTitle" xml:space="preserve">
+    <value>IoT Devices</value>
+  </data>
+  <data name="IoTSensorsTitle" xml:space="preserve">
+    <value>IoT Sensors</value>
+  </data>
+  <data name="LanguageSelectionTitle" xml:space="preserve">
+    <value>Language Selection</value>
+  </data>
+  <data name="LastNameHeaderText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastNameLabel" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="LastNameLabelText" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LastNameLabelTitle" xml:space="preserve">
+    <value>Last Name:</value>
+  </data>
+  <data name="LastNamePlaceholder" xml:space="preserve">
+    <value>Enter last name</value>
+  </data>
+  <data name="LoginButtonText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginHeaderText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginLabel" xml:space="preserve">
+    <value>Login:</value>
+  </data>
+  <data name="LoginLabelText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LoginLabelTitle" xml:space="preserve">
+    <value>Login:</value>
+  </data>
+  <data name="LoginPlaceholder" xml:space="preserve">
+    <value>Enter login</value>
+  </data>
+  <data name="LoginText" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LogoutButtonText" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MessageHeaderText" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MiddleNameHeaderText" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="MiddleNameLabel" xml:space="preserve">
+    <value>Middle Name:</value>
+  </data>
+  <data name="MiddleNameLabelText" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="MiddleNameLabelTitle" xml:space="preserve">
+    <value>Middle Name:</value>
+  </data>
+  <data name="MiddleNamePlaceholder" xml:space="preserve">
+    <value>Enter middle name</value>
+  </data>
+  <data name="MonitoringTitle" xml:space="preserve">
+    <value>Monitoring</value>
+  </data>
+  <data name="MonitoringTitleText" xml:space="preserve">
+    <value>IoT Notifications Monitoring</value>
+  </data>
+  <data name="NameHeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NormalNotificationText" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NotificationCreatedAtLabel" xml:space="preserve">
+    <value>Created At</value>
+  </data>
+  <data name="NotificationIdLabel" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="NotificationIoTDeviceLabel" xml:space="preserve">
+    <value>IoT Device</value>
+  </data>
+  <data name="NotificationTextLabel" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="NotificationTypeCritical" xml:space="preserve">
+    <value>Critical</value>
+  </data>
+  <data name="NotificationTypeHeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="NotificationTypeLabel" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="NotificationTypeNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="NotificationTypeUnknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="NotificationTypeWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="PasswordLabelText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordLabelTitle" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="PasswordPlaceholder" xml:space="preserve">
+    <value>Enter password</value>
+  </data>
+  <data name="PhoneLabel" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="PhoneLabelText" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneLabelTitle" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="PhonePlaceholder" xml:space="preserve">
+    <value>Enter phone number</value>
+  </data>
+  <data name="RegisterButtonText" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RegisterText" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="ResourceTypeElectricity" xml:space="preserve">
+    <value>Electricity</value>
+  </data>
+  <data name="ResourceTypeGas" xml:space="preserve">
+    <value>Gas</value>
+  </data>
+  <data name="ResourceTypeLabel" xml:space="preserve">
+    <value>Resource Type</value>
+  </data>
+  <data name="ResourceTypeWater" xml:space="preserve">
+    <value>Water</value>
+  </data>
+  <data name="RoleAdminText" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="RoleGuestText" xml:space="preserve">
+    <value>Guest</value>
+  </data>
+  <data name="RoleHeaderText" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RoleLabelText" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RoleLabelTitle" xml:space="preserve">
+    <value>Role:</value>
+  </data>
+  <data name="RoleMunicipalResourceManagerText" xml:space="preserve">
+    <value>Municipal Resource Manager</value>
+  </data>
+  <data name="RolePickerTitle" xml:space="preserve">
+    <value>Select Role</value>
+  </data>
+  <data name="RoleUserText" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="SaveAccountButtonText" xml:space="preserve">
+    <value>Save Account</value>
+  </data>
+  <data name="SaveChangesButtonText" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="StatusHeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SuccessTitle" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="TimeHeaderText" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimeLabel" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="TimestampHeaderText" xml:space="preserve">
+    <value>Timestamp</value>
+  </data>
+  <data name="TypeHeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UnknownText" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UpdateButtonText" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdatedAtHeaderText" xml:space="preserve">
+    <value>Updated At</value>
+  </data>
+  <data name="UserAccountTitle" xml:space="preserve">
+    <value>User Account</value>
+  </data>
+  <data name="UserAccountTitleText" xml:space="preserve">
+    <value>User Account</value>
+  </data>
+  <data name="UserManagementTitle" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="UserTabAccountText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="UserTabConsumptionHistoryText" xml:space="preserve">
+    <value>Consumption History</value>
+  </data>
+  <data name="UserTabIoTDevicesText" xml:space="preserve">
+    <value>IoT Devices</value>
+  </data>
+  <data name="WarningNotificationText" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="WaterSensorText" xml:space="preserve">
+    <value>Water Sensor</value>
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Welcome to EcoMeChan</value>
+  </data>
+</root>

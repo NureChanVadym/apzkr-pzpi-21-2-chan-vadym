@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:EcoMeChan_Mobile.ViewModels"
+             x:Class="EcoMeChan_Mobile.Views.CreateUserPage"
+             Title="Create User">
+
+    <ContentPage.BindingContext>
+        <viewModels:CreateUserViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="15">
+            <Label x:Name="LoginLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.Login}" Placeholder="{Binding LoginPlaceholder}" />
+
+            <Label x:Name="EmailLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.Email}" Placeholder="{Binding EmailPlaceholder}" />
+
+            <Label x:Name="FirstNameLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.FirstName}" Placeholder="{Binding FirstNamePlaceholder}" />
+
+            <Label x:Name="LastNameLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.LastName}" Placeholder="{Binding LastNamePlaceholder}" />
+
+            <Label x:Name="MiddleNameLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.MiddleName}" Placeholder="{Binding MiddleNamePlaceholder}" />
+
+            <Label x:Name="PhoneLabel" FontSize="Medium" />
+            <Entry Text="{Binding NewUser.Phone}" Placeholder="{Binding PhonePlaceholder}" />
+
+            <Label x:Name="PasswordLabel" FontSize="Medium" />
+            <Entry Text="{Binding Password}" Placeholder="{Binding PasswordPlaceholder}" IsPassword="True" />
+
+            <Label x:Name="RoleLabel" FontSize="Medium" />
+            <Picker Title="{Binding RolePickerTitle}" ItemsSource="{Binding Roles}" SelectedItem="{Binding NewUser.Role}" />
+
+            <Button x:Name="CreateUserButton" Command="{Binding CreateUserCommand}" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
