@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 132.74,
+      "left": -217.1,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -29.1,
+      "left": -360.7,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr2",
+      "top": -29.1,
+      "left": -245.5,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr3",
+      "top": -29.1,
+      "left": -120.7,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-microsd-card",
+      "id": "sd1",
+      "top": 362.03,
+      "left": -175.07,
+      "rotate": 270,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "ldr1:GND", "black", [ "v0" ] ],
+    [ "esp:GND.2", "ldr2:GND", "black", [ "v0" ] ],
+    [ "esp:GND.2", "ldr3:GND", "black", [ "v0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr2:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr3:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr1:AO", "esp:33", "green", [ "v0" ] ],
+    [ "ldr2:AO", "esp:34", "green", [ "v0" ] ],
+    [ "ldr3:AO", "esp:35", "green", [ "v0" ] ],
+    [ "sd1:VCC", "esp:3V3", "red", [ "v-67.2", "h28.94", "v-105.75" ] ],
+    [ "sd1:GND", "esp:GND.3", "black", [ "v-19.2", "h-9.49" ] ],
+    [ "sd1:CS", "esp:5", "green", [ "v-48", "h-67.14" ] ],
+    [ "esp:23", "sd1:DI", "blue", [ "h-19.2", "v76.8" ] ],
+    [ "sd1:DO", "esp:19", "gold", [ "v0" ] ],
+    [ "sd1:SCK", "esp:18", "violet", [ "v-28.8", "h-28.81" ] ]
+  ],
+  "dependencies": {}
+}
