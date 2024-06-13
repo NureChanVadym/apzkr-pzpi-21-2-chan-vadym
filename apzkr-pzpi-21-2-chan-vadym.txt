@@ -2372,7 +2372,7 @@ EcoMeChan забезпечує інтегрований підхід до мон
 211         if (filters.dateFrom && filters.dateTo) {
 212             const dateFrom = new Date(filters.dateFrom);
 213             const dateTo = new Date(filters.dateTo);
-214             dateTo.setDate(dateTo.getDate() + 1); // Р”РѕРґР°С”РјРѕ РѕРґРёРЅ РґРµРЅСЊ РґРѕ РґР°С‚Рё "РґРѕ"
+214             dateTo.setDate(dateTo.getDate() + 1);
 215 
 216             if (dateFrom > dateTo) {
 217                 newErrors.dateFrom = 'Date From cannot be greater than Date To';
@@ -2411,7 +2411,7 @@ EcoMeChan забезпечує інтегрований підхід до мон
 250                 return false;
 251             }
 252             if (dateTo) {
-253                 dateTo.setDate(dateTo.getDate() + 1); // Р”РѕРґР°С”РјРѕ РѕРґРёРЅ РґРµРЅСЊ РґРѕ РґР°С‚Рё "РґРѕ"
+253                 dateTo.setDate(dateTo.getDate() + 1); 
 254                 if (date > dateTo) {
 255                     return false;
 256                 }
@@ -3113,4 +3113,4 @@ EcoMeChan забезпечує інтегрований підхід до мон
 Перевірка на плагіат
 
 
-
+ 
